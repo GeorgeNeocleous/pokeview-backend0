@@ -1,10 +1,19 @@
-const { request } = require("express");
+const jwt = require("jsonwebtoken")
 
 let jwtSecretKey = process.env.JWT_SECRET_KEY;
 
 async function generateJWT(userId, username){
-    result = request.username;
-    jwt
+    // format is jwt.sign(user, JWT_SECRET)
+    return jwt.sign(
+        {
+            userId: userId,
+            username: username
+        },
+            jwtSecretKey,
+        {
+            expiresIn: "10h"
+        }
+    );
 }
 
 async function decodeJWT(tokenToDecode){
