@@ -8,7 +8,7 @@ const app = express();
 // Allows the server to 
 app.use(express.json());
 
-let cors = {
+let corsOptions = {
     //         local                     vite                     deployed react app
     origin: ["http://localhost:3000", "http://localhost:5173", "https://deployedrectapp.com"],
     optionsSuccessStatus: 200
