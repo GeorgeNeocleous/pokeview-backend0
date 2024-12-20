@@ -36,7 +36,7 @@ app.post("/signup", async (request, response) => {
         user: {
             id: newUser.id,
             username: newUser.username
-        };
+        }
     });
 });
 
