@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "pokeview-backend0",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
