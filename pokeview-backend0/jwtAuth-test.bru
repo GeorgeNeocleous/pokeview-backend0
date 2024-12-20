@@ -1,0 +1,15 @@
+meta {
+  name: jwtAuth-test
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/authenticationRoute
+  body: none
+  auth: none
+}
+
+headers {
+  jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY1ODRkMWExYTBjOTI0NjEzYzgzNDkiLCJ1c2VybmFtZSI6InVzZXJuYW1lMTA1IiwiaWF0IjoxNzM0NzA2Mzg1LCJleHAiOjE3MzQ3NDIzODV9.q03WDEa71maP2EY_QY5xR9iu-D8-zga5B8q9taog5bg
+}

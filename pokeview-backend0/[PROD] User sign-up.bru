@@ -1,0 +1,18 @@
+meta {
+  name: [PROD] User sign-up
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://pokeview-backend0.onrender.com/signup
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username":"username105",
+    "password":"password"
+  }
+}
