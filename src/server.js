@@ -1,5 +1,5 @@
 const express = require("express");
-const { generateJWT } = require("./functions/jwtFunctions");
+const { generateJWT, validateUserAuth } = require("./functions/jwtFunctions");
 const { User } = require("./models/UserModel");
 
 const app = express();
@@ -40,9 +40,13 @@ app.post("/signup", async (request, response) => {
     });
 });
 
-
-
-
+app.get("/authenticationRoute", validateUserAuth, (request, response) => {
+    response.json({
+        message:"You can see protected content because you're signed in"
+    });
+});
+ 
+ 
 
 module.exports = {
     app

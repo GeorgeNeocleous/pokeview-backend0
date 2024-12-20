@@ -5,7 +5,14 @@ meta {
 }
 
 post {
-  url: http://localhost:8081/signup
-  body: none
+  url: http://localhost:8080/signup
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "username":"username1",
+    "password":"password"
+  }
 }
