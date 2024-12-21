@@ -56,7 +56,6 @@ app.get("/authenticationRoute", validateUserAuth, (request, response) => {
     });
 });
  
- 
 
 module.exports = {
     app
