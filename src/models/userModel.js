@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
         minLength:8,
         trim: true
     },
+    likedPokemon: String,
 });
 
 // Belongs in user collection and is based on the UserSchema
