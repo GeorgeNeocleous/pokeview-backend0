@@ -106,41 +106,9 @@ const seedDatabase = async () => {
 };
 
 // Run the seeding function
-seedDatabase();
 
 module.exports = PokemonData;
 
-
-// async function fetchPokemon (id){
-//   const pokemonData = []; // Array to store all Pokémon data
-
-//   for (let id = 1; id <= 151; id++) {
-//     try {
-//       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-//       const pokemon = await response.json();
-//       pokemonData[id] = {
-//         name: pokemon.name,
-//         id: pokemon.id,
-//         types: pokemon.types.map((type) => type.type.name),
-//         sprites: pokemon.sprites.front_default, 
-//       };
-//     } catch (error) {
-//       console.error(`Error fetching Pokémon with ID ${id}:`, error.message);
-//     }
-//   }
-
-//   return pokemonData;
-// };
-
-// // Fetch and log the Pokémon data
-// fetchPokemon()
-//   .then((data) => console.log(data))
-//   .catch((err) => console.error("Error fetching Pokémon data:", err));
-
-
-// module.exports = {
-//   fetchPokemon, PokemonData
-// }
 
 
 
