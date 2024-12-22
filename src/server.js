@@ -1,6 +1,7 @@
 const express = require("express");
 const { generateJWT, validateUserAuth } = require("./functions/jwtFunctions");
 const { User } = require("./models/userModel");
+const pokemonRouter = require("./controllers/pokemonController")
 const cors = require("cors");
 
 const app = express();
@@ -9,8 +10,8 @@ const app = express();
 app.use(express.json());
 
 let corsOptions = {
-    //         local                     vite                     deployed react app
-    origin: ["http://localhost:3000", "http://localhost:5173", "https://deployedrectapp.com"],
+    //         local                                              vite                     deployed react app
+    origin: ["http://localhost:3000", "http://localhost:8080","http://localhost:5173", "https://deployedrectapp.com"],
     optionsSuccessStatus: 200
 }
 
@@ -55,7 +56,10 @@ app.get("/authenticationRoute", validateUserAuth, (request, response) => {
         message:"You can see protected content because you're signed in"
     });
 });
- 
+
+
+app.use("/pokemon", pokemonRouter);
+// Tell the app to use that router
 
 module.exports = {
     app
