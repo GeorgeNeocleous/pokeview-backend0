@@ -15,3 +15,5 @@ const seedDatabase = async () => {
     dbDisconnect();
     // mongoose.connection.close();
 };
+
+seedDatabase();
