@@ -1,4 +1,6 @@
-
+const { dbConnect, dbDisconnect } = require("../functions/dbFunctions");
+const { PokemonData } = require("../models/pokemonModel");
+const { fetchFirst151Pokemon } = require("./crud/pokemonCrud");
 
 const seedDatabase = async () => {
     const pokemonArray = await fetchFirst151Pokemon();

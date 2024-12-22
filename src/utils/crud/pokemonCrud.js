@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const { dbConnect } = require("../functions/dbFunctions");
 
 // Fetch a single Pokémon by ID
-const fetchPokemonById = async (id) => {
+async function fetchPokemonById (id){
     try {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       const pokemon = await response.json();
@@ -35,8 +35,15 @@ const fetchPokemonById = async (id) => {
     }
   };
   
+  async function findOnePokemon(query){
+    // says to populate the field author
+    // assumes the populate query is a document from another collection
+    let result = await PokemonData.findOne(query);
+    return result;
+}
+
   // Fetch the first 151 Pokémon
-  const fetchFirst151Pokemon = async () => {
+  async function fetchFirst151Pokemon(){
     const allPokemon = [];
     for (let id = 1; id <= 151; id++) {
       const pokemon = await fetchPokemonById(id);

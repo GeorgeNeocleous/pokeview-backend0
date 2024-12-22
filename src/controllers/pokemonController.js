@@ -6,15 +6,6 @@ const { mongoose } = require("mongoose");
 
 require("dotenv").config();
 
-
-
-async function findOnePokemon(query){
-    // says to populate the field author
-    // assumes the populate query is a document from another collection
-    let result = await PokemonData.findOne(query);
-    return result;
-}
-
 // pokemon/search/:pokemonName
 router.get("/search/:pokemonName", async (request, response) => {
     try {

@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "seed": "node src/utils/seeding.js",
+    "start:seed": "npm run seed && npm run start",
+    "db:drop":"node src/utils/dropping.js",
+    "db:drop-and-seed":"npm run db:drop && npm run seed"
   },
   "keywords": [],
   "author": "",

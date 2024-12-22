@@ -1,8 +1,10 @@
 const express = require("express");
 const { generateJWT, validateUserAuth } = require("./functions/jwtFunctions");
 const { User } = require("./models/userModel");
+const { PokemonData } = require("./models/pokemonModel");
 const pokemonRouter = require("./controllers/pokemonController")
 const cors = require("cors");
+
 
 const app = express();
 
