@@ -1,5 +1,14 @@
 # pokeview-backend0
 
+## Backend
+Github: https://github.com/GeorgeNeocleous/pokeview-backend0
+Render: 
+## 
+
+
+JWT_SECRET_KEY=afjgkrk453iordfjgd934rmdasfmfwe34daswd
+DATABASE_URL=mongodb+srv://user:Coolpassword1@pokeview-backend0.jzqfr.mongodb.net/?retryWrites=true&w=majority&appName=pokeview-backend0
+
 - User model
     - username
     - password
@@ -42,5 +51,35 @@
             - Total like number
             - Stats
 
-## db schemas: 
+## Packages:
+
+### "bcrypt": "^5.1.1" (Not in use - TODO)
+- bcrypt is a package that was installed with the intention of using the hashing and salting functionality for additional user data security.
+- Useful functionality would've been with their bcrypt.genSalt, bcrypt.hash and then bcrypt.compare.
+
+
+### "cors": "^2.8.5"
+- Is used to restrict what ports can request data from the server.
+
+
+### "dotenv": "^16.4.7"
+- Allows the app to use a dotenv file to store, abstract and use sensitive data from the .env file.
+
+
+### "express": "^4.21.2"
+- Manages the routes for the app.
+
+
+### "helmet": "^8.0.0" (Not in use - TODO)
+- A middeleware package that allows the addition of security-related HTTP headers. 
+
+
+### "jsonwebtoken": "^9.0.2"
+- Used to manage user authentication. Allows restriction of access to certain data based on a valid jwt.
+
+
+### "mongoose": "^8.9.1
+- Defines schemas and interacts with MongoDB.
+
+
 

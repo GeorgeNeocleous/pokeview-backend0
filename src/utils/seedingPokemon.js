@@ -2,7 +2,7 @@ const { dbConnect, dbDisconnect } = require("../functions/dbFunctions");
 const { PokemonData } = require("../models/pokemonModel");
 const { fetchFirst151Pokemon } = require("./crud/pokemonCrud");
 
-const seedDatabase = async () => {
+async function seedDatabasePokemon(){
     const pokemonArray = await fetchFirst151Pokemon();
 
     console.log("Fetched Pokémon data, inserting into database...");
@@ -16,4 +16,4 @@ const seedDatabase = async () => {
     // mongoose.connection.close();
 };
 
-seedDatabase();
+seedDatabasePokemon();
