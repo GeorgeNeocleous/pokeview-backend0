@@ -5,8 +5,6 @@ require("dotenv").config();
 const { dbConnect } = require("./functions/dbFunctions.js");
 const {app} = require("./server.js");
 
-
-
 // console.log(dotEnvironment);
 
 const PORT = process.env.PORT || 8080;

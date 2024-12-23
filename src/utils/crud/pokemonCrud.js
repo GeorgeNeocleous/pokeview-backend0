@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const fetch = require("node-fetch");
-const { dbConnect } = require("../functions/dbFunctions");
 
 // Fetch a single Pokémon by ID
 async function fetchPokemonById (id){
@@ -35,7 +34,7 @@ async function fetchPokemonById (id){
     }
   };
   
-  async function findOnePokemon(query){
+async function findOnePokemon(query){
     // says to populate the field author
     // assumes the populate query is a document from another collection
     let result = await PokemonData.findOne(query);
@@ -43,7 +42,7 @@ async function fetchPokemonById (id){
 }
 
   // Fetch the first 151 Pokémon
-  async function fetchFirst151Pokemon(){
+async function fetchFirst151Pokemon(){
     const allPokemon = [];
     for (let id = 1; id <= 151; id++) {
       const pokemon = await fetchPokemonById(id);
@@ -51,7 +50,7 @@ async function fetchPokemonById (id){
     }
     return allPokemon;
     ;
-  };
+};
 
 // Run the seeding function
 
