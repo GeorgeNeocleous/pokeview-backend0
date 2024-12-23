@@ -2,12 +2,9 @@
 
 ## Backend
 Github: https://github.com/GeorgeNeocleous/pokeview-backend0
-Render: 
+Render: https://pokeview-backend0.onrender.com/
 ## 
 
-
-JWT_SECRET_KEY=afjgkrk453iordfjgd934rmdasfmfwe34daswd
-DATABASE_URL=mongodb+srv://user:Coolpassword1@pokeview-backend0.jzqfr.mongodb.net/?retryWrites=true&w=majority&appName=pokeview-backend0
 
 - User model
     - username
