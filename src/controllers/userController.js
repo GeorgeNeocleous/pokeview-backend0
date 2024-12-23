@@ -7,35 +7,44 @@ const { validateUserAuth, generateJWT } = require("../functions/jwtFunctions");
 
 
 router.post("/signup", async (request, response) => {
-	// check that a username and password are provided in request.body 
-	let username = request.body.username;
-	let password = request.body.password;
+    try {
+        // check that a username and password are provided in request.body 
+        let username = request.body.username;
+        let password = request.body.password;
 
-	if (!username || !password) {
-		response.status(400).json({
-			message:"Incorrect or missing sign-up credentials provided."
-		});
-	}
+        if (!username || !password) {
+            response.status(400).json({
+                message:"Incorrect or missing sign-up credentials provided."
+            });
+        }
 
-	// make a user in the DB using the username and password
-	let newUser = await User.create({username: username, password: password});
+        // make a user in the DB using the username and password
+        let newUser = await User.create({username: username, password: password});
 
-	// make a JWT based on the username and userID 
-	let newJwt = generateJWT(newUser.id, newUser.username);
+        // make a JWT based on the username and userID 
+        let newJwt = generateJWT(newUser.id, newUser.username);
 
-	// return the JWT 
-	response.json({
-		jwt: newJwt,
-		user: {
-			id: newUser.id,
-			username: newUser.username
-		}
-	});
+        // return the JWT 
+        response.json({
+            jwt: newJwt,
+            user: {
+                id: newUser.id,
+                username: newUser.username
+            }
+        });
+    } catch (error) {
+        console.error("Error during signup:", error.message);
+
+        // Generic errors
+        return response.status(500).json({
+        message: "An error occurred during signup. Please try again later.",
+        });
+    }
 });
 
 router.get("/authenticationRoute", validateUserAuth, (request, response) => {
     response.json({
-        message:"You can see protected content because you're signed in"
+        message:"jwt is valid"
     });
 });
 

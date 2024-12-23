@@ -1,2 +1,2 @@
 // Functions to fetch users
-// To potentially use with a route protected with jwt validation with some something to identify an admin account
+// Potentially, in conjunction with a restricted route that has auth control (jwt)
