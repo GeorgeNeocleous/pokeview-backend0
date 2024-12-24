@@ -1,7 +1,6 @@
 const { mongoose } = require("mongoose");
 const { dbConnect, dbDisconnect } = require("../functions/dbFunctions");
 const { User } = require("../models/userModel");
-const { fetchFirst151Pokemon } = require("./crud/pokemonCrud");
 
 async function seedDatabaseUser(){
     dbConnect();

@@ -1,5 +1,4 @@
 const express = require("express");
-const { generateJWT, validateUserAuth } = require("./functions/jwtFunctions");
 const { User } = require("./models/userModel");
 const { PokemonData } = require("./models/pokemonModel");
 const pokemonRouter = require("./controllers/pokemonController")
@@ -12,19 +11,11 @@ const app = express();
 // Allows the server to 
 app.use(express.json());
 
-<<<<<<< development
 // let corsOptions = {
 //     //         local                                              vite                     deployed react app
 //     origin: ["http://localhost:3000", "http://localhost:8080","http://localhost:5173", "https://deployedrectapp.com"],
 //     optionsSuccessStatus: 200
 // }
-=======
-// let corsOptions = {
-//     //         local                     vite                     deployed react app
-//     origin: ["http://localhost:3000", "http://localhost:5173", "https://deployedrectapp.com"],
-//     optionsSuccessStatus: 200
-// }
->>>>>>> main
 
 // app.use(cors(corsOptions));
 

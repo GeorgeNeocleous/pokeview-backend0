@@ -39,6 +39,11 @@ Render: https://pokeview-backend0.onrender.com/
         - gets one user and deletes it
         - returns deleted user information
 
+- "pokemon/:usersID"
+    - DELETE
+        - gets one user and deletes it
+        - returns deleted user information
+
 - "/"
     - returns pokemon data for all 151 for the front-end to work with
         - GET
@@ -58,7 +63,7 @@ Render: https://pokeview-backend0.onrender.com/
 
 ### "cors": "^2.8.5"
 - Is used to restrict what ports can request data from the server.
-
+- cors code was commented out because I think it may have been restricting me in testing but I didn't have time to troubleshoot.
 
 ### "dotenv": "^16.4.7"
 - Allows the app to use a dotenv file to store, abstract and use sensitive data from the .env file.
