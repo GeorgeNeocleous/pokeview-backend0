@@ -22,10 +22,10 @@ app.use(express.json());
 
 app.get("/", (request, response) => {
     response.json({
-        message:"Hello, world"
+        message:"Hello world"
     });
 });
-
+ 
 app.use("/users", userRouter);
 
 app.use("/pokemon", pokemonRouter);

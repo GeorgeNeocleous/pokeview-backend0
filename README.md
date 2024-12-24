@@ -1,9 +1,10 @@
 # pokeview-backend0
+FUll-stack app part A: https://github.com/GeorgeNeocleous/t3a2-a-pokeview
 
 ## Backend
 Github: https://github.com/GeorgeNeocleous/pokeview-backend0
 Render: https://pokeview-backend0.onrender.com/
-## 
+
 
 
 - User model
@@ -79,4 +80,7 @@ Render: https://pokeview-backend0.onrender.com/
 - Defines schemas and interacts with MongoDB.
 
 
+
+
+ 
 

@@ -16,7 +16,7 @@ async function dbConnect() {
     console.log("Disconnecting from database");
      
     await mongoose.connection.close();
-    console.log("Disconnect successful");
+    // console.log("Disconnect successful");
  }
 
 

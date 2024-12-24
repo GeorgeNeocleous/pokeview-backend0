@@ -11,7 +11,7 @@ function generateJWT(userId, username){
         },
             jwtSecretKey,
         {
-            expiresIn: "10h"
+            expiresIn: "2d"
         }
     );
 }
