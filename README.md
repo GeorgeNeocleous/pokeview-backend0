@@ -82,5 +82,8 @@ Render: https://pokeview-backend0.onrender.com/
 
 
 
+Need to create a new user using the User sign-up route in bruno. Then use the provided token for jwtAuth-test.
+
+
  
 

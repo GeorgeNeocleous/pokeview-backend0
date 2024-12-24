@@ -25,21 +25,3 @@ const User = mongoose.model("User", UserSchema);
 module.exports = {
     User
 }
-
-// static signup method
-// UserSchema.statics.signup = async (username, password) => {
-//     const exists = await this.findOne({username});
-
-//     if (exists){
-//         throw Error('Username is already in use')
-//     };
-
-//     // Generates a string
-//     const salt = await bcrypt.genSalt(10);
-//     // Hashes the password, takes the password and salt as arguments
-//     const hash = await bcrypt.hash(password, salt);
-
-//     const user = await this.create({username, password: hash})
-
-//     return user
-// }
