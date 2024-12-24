@@ -7,11 +7,6 @@ Render: https://pokeview-backend0.onrender.com/
 
 
 
-- User model
-    - username
-    - password
-
-
 ## Routes:
 
 - "/signup"
@@ -54,6 +49,9 @@ Render: https://pokeview-backend0.onrender.com/
             - Total like number
             - Stats
 
+NOTE
+Bruno: Need to create a new user using the User sign-up route in bruno. Then use the provided token for jwtAuth-test.
+
 ## Packages:
 
 ### "bcrypt": "^5.1.1" (Not in use - TODO)
@@ -85,10 +83,34 @@ Render: https://pokeview-backend0.onrender.com/
 - Defines schemas and interacts with MongoDB.
 
 
+## Trello / Source control & project management methodology
+For this project I utilised Trello to try and implement a kanban methodology. Tasks were split and given colors based on perceived difficulty and effort needed. 
+This project was attempted without a team and so I tried to gauge my own strengths and weaknesses. 
+In general, I believe my strengths are more with the backend than the front end. Obviously this attempt has fallen short of the front-end requirement and an opportunity to assess this.
+
+https://trello.com/b/AC33aLel/poke-view
+
+![A diagram to show the app architecture](./Resources/Source%20control%20graph.JPG)
+- The (attempted) source control methodology was a Gitflow workflow. Where main was production code and from main there was a development branch. From development there were then feature branches to create new features in isolation and after completion were merged into development. With adequate new functionality and testing, these changes to development were then merged with main and represented a new production build.
+
+Gitflow workflow: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+![A snapshot of the backend portion of my trello/kanban board](./Resources/trello%20-%20Backend.JPG)
+
+![Backend initial setup card](./Resources/Backend%20-%20initial%20setup.JPG)
+- Green: because I didn't think this would take much effort relative to other tasks.
+
+![A diagram to show the app architecture](./Resources/Controllers.JPG)
+- Green: I feel as though this is a strength because to me this is very straight forward. It involves coupling functions together to ensure the routes make sense in function and purpose.
 
 
-Need to create a new user using the User sign-up route in bruno. Then use the provided token for jwtAuth-test.
+![A diagram to show the app architecture](./Resources/Models.JPG)
+- Yellow: There was so much choice for the model structure that I wasn't sure what to go with. One of my current weaknesses is trying to figure out what direction I want to go, given the amount of freedom this project allowed.
+
+![A diagram to show the app architecture](./Resources/trello%20-%20Backend%20-%20testing.JPG)
+- Yellow: I thought this wasn't too bad to setup. I like thinking of tests to create but I wasn't as familiar as I should be with the testing format or with what different things I can reasonably test.
 
 
- 
+![A diagram to show the app architecture](./Resources/utils%20+%20crud.JPG)
+- Yellow: This felt more complex due to the pokemon model, I got a little bit lost in what sort of functionality I needed. Then I ran out of time to implement the user CRUD. 
 
